@@ -20,7 +20,34 @@ public class StudentArray
     // Свойства
     public Student[] Students { get; set; }
     // Индексатор 
-    
+    public Student this[int index]
+    {
+        get
+        {
+            try
+            {
+                if (index < 0 || index >= Students.Length) throw new IndexOutOfRangeException();
+                else return Students[index];
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e);
+            }
+            return null;
+        }
+        set
+        {
+            try
+            {
+                if (index < 0 || index >= Students.Length) throw new IndexOutOfRangeException();
+                else Students[index] = value;
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+    }
     // Конструкторы
     public StudentArray()
     {
