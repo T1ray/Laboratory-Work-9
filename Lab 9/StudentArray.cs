@@ -66,10 +66,19 @@ public class StudentArray
         }
     }
 
-    public StudentArray(Student[] students)
+    public StudentArray(params Student[] students)
     {
         Students = new Student[students.Length];
         for (int i = 0; i < students.Length; i++)
+        {
+            Students[i] = students[i];
+        }
+    }
+
+    public StudentArray(StudentArray students)
+    {
+        Students = new Student[students.Students.Length];
+        for (int i = 0; i < Students.Length; i++)
         {
             Students[i] = students[i];
         }
