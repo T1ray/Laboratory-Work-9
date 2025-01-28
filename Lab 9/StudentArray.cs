@@ -16,6 +16,8 @@ public class StudentArray
     "Алексей",
     "Наталья"
     };
+
+    private static int numberObjects;
     
     // Свойства
     public Student[] Students { get; set; }
@@ -24,28 +26,13 @@ public class StudentArray
     {
         get
         {
-            try
-            {
-                if (index < 0 || index >= Students.Length) throw new IndexOutOfRangeException();
-                else return Students[index];
-            }
-            catch (IndexOutOfRangeException e)
-            {
-                Console.WriteLine(e);
-            }
-            return null;
+            if (index < 0 || index >= Students.Length) throw new IndexOutOfRangeException();
+            else return Students[index];
         }
         set
         {
-            try
-            {
-                if (index < 0 || index >= Students.Length) throw new IndexOutOfRangeException();
-                else Students[index] = value;
-            }
-            catch (IndexOutOfRangeException e)
-            {
-                Console.WriteLine(e);
-            }
+            if (index < 0 || index >= Students.Length) throw new IndexOutOfRangeException();
+            else Students[index] = value;
         }
     }
     // Конструкторы
@@ -53,6 +40,7 @@ public class StudentArray
     {
         Students = new Student[1];
         Students[0] = new Student("Вася", 19, 8.92);
+        numberObjects += 1;
     }
 
     public StudentArray(int numberStudents)
@@ -64,6 +52,7 @@ public class StudentArray
             Students[i] = new Student(randomNames[random.Next(0, randomNames.Length)], 
                 random.Next(18,23), random.NextDouble()*10);
         }
+        numberObjects += 1;
     }
 
     public StudentArray(params Student[] students)
@@ -73,6 +62,7 @@ public class StudentArray
         {
             Students[i] = students[i];
         }
+        numberObjects += 1;
     }
 
     public StudentArray(StudentArray students)
@@ -82,6 +72,7 @@ public class StudentArray
         {
             Students[i] = students[i];
         }
+        numberObjects += 1;
     }
     // Методы класса
     public void PrintStudents()
@@ -91,6 +82,24 @@ public class StudentArray
             Students[i].Info();
         }
     }
+
+    // public string OldestHonorsStudent()
+    // {
+    //     int oldestStudentIndex = -1;
+    //     int currentOldestStudentIndex = 0;
+    //     for (int curIndex = 0; curIndex < Students.Length; curIndex++)
+    //     {
+    //         if (Students[curIndex].Age > Students[currentOldestStudentIndex].Age && 
+    //             Students[curIndex].Gpa > 8)
+    //         {
+    //             oldestStudentIndex = curIndex;
+    //         }
+    //     }
+    //     return oldestStudentIndex>-1 ? Students[oldestStudentIndex].Name : "-1";
+    // }
     // Статические функции
-    
+    public static int NumberObjects()
+    {
+        return numberObjects;
+    }
 }

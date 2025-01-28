@@ -119,23 +119,18 @@ public class Student
 
     public static Student operator -(Student student, double d)
     {
-        try
-        {
             Student newStudent;
             if (student.Gpa - d > 0) newStudent = new Student(student.Name, student.Age, student.Gpa - d);
             else throw new Exception("Gpa не может стать отрицательным");
             return newStudent;
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            return student;
-        }
     }
 
     public override bool Equals(object obj)
     {
-        if (obj is Student student) return Name == student.Name && Age == student.Age && Gpa == student.Gpa;
+        if (obj is Student student) 
+            return Name == student.Name 
+                   && Age == student.Age 
+                   && Gpa == student.Gpa;
         return false;
     }
 }
