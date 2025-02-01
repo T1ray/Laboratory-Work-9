@@ -2,7 +2,6 @@
 
 namespace TestProgram
 {
-    
     [TestClass]
     public sealed class TestStudent
     {
