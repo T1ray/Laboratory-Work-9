@@ -17,13 +17,12 @@ public class Student
             try
             {
                 if (value < 18) throw new Exception("Студенту не может быть меньше 18 лет");
-                
                 age = value;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                age = 18;
+                age = -1;
             }
         }
     }
@@ -43,6 +42,7 @@ public class Student
             catch (Exception e)
             {
                 Console.WriteLine(e);
+                gpa = -1;
             }
         }
     }
@@ -76,8 +76,6 @@ public class Student
         string gpaComrassion = gpa < anotherStudent.Gpa ? "ниже" : gpa > anotherStudent.Gpa ? "выше" : "равен";
     
         return (ageComprassion, gpaComrassion);
-        Console.WriteLine($"{Name} {ageComprassion} {anotherStudent.Name}");
-        Console.WriteLine($"gpa {Name} {gpaComrassion} {anotherStudent.Name}");
     }
 
     public static (string, string) CompareStudents(Student firstStudent, Student secondStudent)

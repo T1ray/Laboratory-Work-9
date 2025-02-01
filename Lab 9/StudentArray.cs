@@ -17,7 +17,7 @@ public class StudentArray
     "Наталья"
     };
 
-    private static int numberObjects;
+    public static int numberObjects;
     
     // Свойства
     public Student[] Students { get; set; }
@@ -82,24 +82,6 @@ public class StudentArray
             Students[i].Info();
         }
     }
-
-    // public string OldestHonorsStudent()
-    // {
-    //     int oldestStudentIndex = -1;
-    //     int currentOldestStudentIndex = 0;
-    //     for (int curIndex = 0; curIndex < Students.Length; curIndex++)
-    //     {
-    //         if (Students[curIndex].Age > Students[currentOldestStudentIndex].Age && 
-    //             Students[curIndex].Gpa > 8)
-    //         {
-    //             oldestStudentIndex = curIndex;
-    //         }
-    //     }
-    //     return oldestStudentIndex>-1 ? Students[oldestStudentIndex].Name : "-1";
-    // }
+    
     // Статические функции
-    public static int NumberObjects()
-    {
-        return numberObjects;
-    }
 }
