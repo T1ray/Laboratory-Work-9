@@ -222,9 +222,9 @@ var assemblies = [
     "name": "Lab 9",
     "classes": [
       { "name": "Lab9_1.Program", "rp": "Lab_9_Program.html", "cl": 0, "ucl": 25, "cal": 25, "tl": 44, "cb": 0, "tb": 6, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Lab9_1.Student", "rp": "Lab_9_Student.html", "cl": 77, "ucl": 7, "cal": 84, "tl": 134, "cb": 30, "tb": 36, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Lab9_1.StudentArray", "rp": "Lab_9_StudentArray.html", "cl": 0, "ucl": 63, "cal": 63, "tl": 87, "cb": 0, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "Lab9_1.UserInterface", "rp": "Lab_9_UserInterface.html", "cl": 0, "ucl": 176, "cal": 176, "tl": 218, "cb": 0, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Lab9_1.Student", "rp": "Lab_9_Student.html", "cl": 77, "ucl": 17, "cal": 94, "tl": 148, "cb": 30, "tb": 44, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Lab9_1.StudentArray", "rp": "Lab_9_StudentArray.html", "cl": 67, "ucl": 13, "cal": 80, "tl": 108, "cb": 19, "tb": 30, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "Lab9_1.UserInterface", "rp": "Lab_9_UserInterface.html", "cl": 0, "ucl": 175, "cal": 175, "tl": 216, "cb": 0, "tb": 16, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
@@ -239,6 +239,12 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
+    "assembly": "Lab 9", "class": "Lab9_1.Student", "reportPath": "Lab_9_Student.html", "methodName": "Equals(System.Object,System.Object)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 141,
+    "metrics": [
+      { "value": 72, "exceeded": true },
+      { "value": 8, "exceeded": false },
+    ]},
+  {
     "assembly": "Lab 9", "class": "Lab9_1.UserInterface", "reportPath": "Lab_9_UserInterface.html", "methodName": "OldestHonorsStudent(Lab9_1.StudentArray)", "methodShortName": "OldestHonorsStudent(...)", "fileIndex": 0, "line": 29,
     "metrics": [
       { "value": 72, "exceeded": true },
@@ -251,13 +257,13 @@ var riskHotspots = [
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "Lab 9", "class": "Lab9_1.Student", "reportPath": "Lab_9_Student.html", "methodName": "Equals(System.Object)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 127,
+    "assembly": "Lab 9", "class": "Lab9_1.Student", "reportPath": "Lab_9_Student.html", "methodName": "Equals(System.Object)", "methodShortName": "Equals(...)", "fileIndex": 0, "line": 132,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },
     ]},
   {
-    "assembly": "Lab 9", "class": "Lab9_1.UserInterface", "reportPath": "Lab_9_UserInterface.html", "methodName": "Part3()", "methodShortName": "Part3()", "fileIndex": 0, "line": 125,
+    "assembly": "Lab 9", "class": "Lab9_1.UserInterface", "reportPath": "Lab_9_UserInterface.html", "methodName": "Part3()", "methodShortName": "Part3()", "fileIndex": 0, "line": 118,
     "metrics": [
       { "value": 42, "exceeded": true },
       { "value": 6, "exceeded": false },

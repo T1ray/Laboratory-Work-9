@@ -17,10 +17,12 @@ public class StudentArray
     "Наталья"
     };
 
-    public static int numberObjects;
+    private static int numberObjects;
     
     // Свойства
     public Student[] Students { get; set; }
+    
+    public int Length { get => Students.Length; }
     // Индексатор 
     public Student this[int index]
     {
@@ -84,4 +86,23 @@ public class StudentArray
     }
     
     // Статические функции
+    public static int NumberObjects()
+    {
+        return numberObjects;
+    }
+    
+    public static bool Equals(object obj1, object obj2)
+    {
+        if (obj1 is StudentArray studentArray1 && obj2 is StudentArray studentArray2)
+        {
+            if (studentArray1.Length != studentArray2.Length) return false;
+            for (int i = 0; i < studentArray1.Length; i++)
+            {
+                if (studentArray1[i].Name != studentArray2[i].Name) return false;
+                if (studentArray1[i].Age != studentArray2[i].Age) return false;
+                if (studentArray1[i].Gpa != studentArray2[i].Gpa) return false;
+            }
+        }
+        return true;
+    }
 }

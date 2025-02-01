@@ -58,7 +58,7 @@ public class UserInterface
             Console.WriteLine("Ошибки при создании объекта класса");
             test1.Info();
             test2.Info();
-            Console.WriteLine($"Количество созданных объектов {Student.numberStudents}");
+            Console.WriteLine($"Количество созданных объектов {Student.NumberStudents()}");
             
             (string, string) comparassion1 = studentPetya.CompareStudents(studentKatya);
             PrintStudentComparassion(studentPetya, studentKatya, comparassion1);
@@ -114,15 +114,13 @@ public class UserInterface
             studentPetya.Info();
         }
 
-        public static void Test()
-        {
-            Student schoolStudent = new Student("Владимир", 15, 8);
-            int course = (int)schoolStudent;
-            Console.WriteLine(course);
-        }
-
         public static void Part3()
         {
+            TextSeparator();
+            Console.WriteLine("Создание базовой коллекции студентов");
+            StudentArray baseStudentArray = new StudentArray();
+            baseStudentArray.PrintStudents();
+            
             TextSeparator();
             Console.WriteLine("Создание рандомной коллекции студентов");
             StudentArray studentArray = new StudentArray(5);
@@ -188,7 +186,7 @@ public class UserInterface
                 Console.WriteLine("Не получилось записать значение по индексу -1 в коллекции");
             }
             Console.WriteLine("---");
-            Console.WriteLine($"Количество объектов коллекции: {StudentArray.numberObjects}");
+            Console.WriteLine($"Количество объектов коллекции: {StudentArray.NumberObjects()}");
             
             TextSeparator();
             Console.WriteLine("Выполнение задания 3-ей часть");

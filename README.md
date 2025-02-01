@@ -14,8 +14,8 @@
 
 **[TestStudent](TestProgram/TestStudent.cs)**
 
-**[TestStudentArray](TestProgram/TestStudent.cs)**
+**[TestStudentArray](TestProgram/TestStudentArray.cs)**
 
 ## Анализ покрытия кода тестами
 
-**[Смотреть](TestProgram/report/index.html)**
+**[Смотреть](https://html-preview.github.io/?url=https://github.com/T1ray/Laboratory-Work-9/blob/master/TestProgram/report/index.html)**

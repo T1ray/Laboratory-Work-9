@@ -6,7 +6,7 @@ public class Student
     public string Name { get; set; }
     private int age;
     private double gpa;
-    public static int numberStudents;
+    private static int numberStudents;
     
     // свойства
     public int Age
@@ -123,12 +123,26 @@ public class Student
             return newStudent;
     }
 
+    public static int NumberStudents()
+    {
+        return numberStudents;
+    }
+
     public override bool Equals(object obj)
     {
         if (obj is Student student) 
             return Name == student.Name 
                    && Age == student.Age 
                    && Gpa == student.Gpa;
+        return false;
+    }
+    
+    public static bool Equals(object obj1, object obj2)
+    {
+        if (obj1 is Student student1 && obj2 is Student student2) 
+            return student1.Name == student2.Name 
+                   && student1.Age == student2.Age 
+                   && student1.Gpa == student2.Gpa;
         return false;
     }
 }
